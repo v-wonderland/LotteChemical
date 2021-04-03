@@ -21,8 +21,8 @@
                     <li><a href="#">투자정보</a></li>
                     <li><a href="#">지속가능경영</a></li>
                     <li><a href="#">인재채용</a></li>
-                    <li><a href="#">홍보센터</a></li>
-                    <li class="product"><a href="#">제품소개</a></li>
+                    <li><a href="html/newsroom.html">홍보센터</a></li>
+                    <li class="product"><a href="html/product.html">제품소개</a></li>
                 </ul>
             </nav>
             <div class="util">
@@ -34,14 +34,14 @@
         </header>
         <main>
             <section class="main_vsl">
-                
                 <div class="swiper-container">
-
                     <div class="swiper-wrapper">
-
-                        <!-- <div class="swiper-slide">
-                            <video src=""></video>
-                        </div> -->
+                        <div class="swiper-slide sl_video">
+                            <div class="dim"></div>
+                            <video preload="auto" loop autoplay muted width="100%" height="100%">
+                                <source src="resources/videos/LotteChemical_main.mp4" type="video/mp4">
+                            </video>
+                        </div>
                         <div class="swiper-slide sl_01">
                             <div class="visual"><img src="resources/images/main_sl_01_bg.png" alt=""></div>
                             <div class="desc">
@@ -63,15 +63,18 @@
                                 <p class="sub_tit"><img src="resources/images/main_sl_03_sub_tit.png" alt=""></p>
                             </div>
                         </div>
-
                     </div>
-
                     <div class="swiper-pagination"></div>
-
+                    
                 </div>
-
                 <script>
                     var swiper = new Swiper('.main_vsl .swiper-container', {
+                        autoHeight: true,
+                        touchRatio: 0,
+                        // autoplay: {
+                        //     delay: 3000,
+                        //     disableOnInteraction: false,
+                        // },
                         speed:1000,
                         effect: 'fade',
                         pagination: {
@@ -149,32 +152,52 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="visual"><img src="resources/images/news_01_visual.png" alt=""></div>
+                                <div class="visual"><img src="resources/images/news_03_visual.png" alt=""></div>
                                 <div class="desc">
-                                    <span class="sub"><img src="resources/images/news_01_sub.png" alt=""></span>
+                                    <span class="sub"><img src="resources/images/news_03_sub.png" alt=""></span>
                                     <dl>
-                                        <dt><img src="resources/images/news_01_dt.png" alt=""></dt>
-                                        <dd><img src="resources/images/news_01_dd.png" alt=""></dd>
+                                        <dt><img src="resources/images/news_03_dt.png" alt=""></dt>
+                                        <dd><img src="resources/images/news_03_dd.png" alt=""></dd>
                                     </dl>
                                 </div>
                             </li>
                             <li>
-                                <div class="visual"><img src="resources/images/news_01_visual.png" alt=""></div>
+                                <div class="visual"><img src="resources/images/news_04_visual.png" alt=""></div>
                                 <div class="desc">
-                                    <span class="sub"><img src="resources/images/news_01_sub.png" alt=""></span>
+                                    <span class="sub"><img src="resources/images/news_04_sub.png" alt=""></span>
                                     <dl>
-                                        <dt><img src="resources/images/news_01_dt.png" alt=""></dt>
-                                        <dd><img src="resources/images/news_01_dd.png" alt=""></dd>
+                                        <dt><img src="resources/images/news_04_dt.png" alt=""></dt>
+                                        <dd><img src="resources/images/news_04_dd.png" alt=""></dd>
                                     </dl>
                                 </div>
                             </li>
                             <li>
-                                <div class="visual"><img src="resources/images/news_01_visual.png" alt=""></div>
+                                <div class="visual"><img src="resources/images/news_05_visual.png" alt=""></div>
                                 <div class="desc">
-                                    <span class="sub"><img src="resources/images/news_01_sub.png" alt=""></span>
+                                    <span class="sub"><img src="resources/images/news_05_sub.png" alt=""></span>
                                     <dl>
-                                        <dt><img src="resources/images/news_01_dt.png" alt=""></dt>
-                                        <dd><img src="resources/images/news_01_dd.png" alt=""></dd>
+                                        <dt><img src="resources/images/news_05_dt.png" alt=""></dt>
+                                        <dd><img src="resources/images/news_05_dd.png" alt=""></dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="visual"><img src="resources/images/news_06_visual.png" alt=""></div>
+                                <div class="desc">
+                                    <span class="sub"><img src="resources/images/news_06_sub.png" alt=""></span>
+                                    <dl>
+                                        <dt><img src="resources/images/news_06_dt.png" alt=""></dt>
+                                        <dd><img src="resources/images/news_06_dd.png" alt=""></dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="visual"><img src="resources/images/news_07_visual.png" alt=""></div>
+                                <div class="desc">
+                                    <span class="sub"><img src="resources/images/news_07_sub.png" alt=""></span>
+                                    <dl>
+                                        <dt><img src="resources/images/news_07_dt.png" alt=""></dt>
+                                        <dd><img src="resources/images/news_07_dd.png" alt=""></dd>
                                     </dl>
                                 </div>
                             </li>
@@ -252,12 +275,25 @@
         </footer>
     </div>
 </body>
-<script>
-    $('#open').click(function(){
-        $('#company').addClass('on');
+<!-- <script>
+    var video = $('video').get(0);
+
+    $(document).delegate('.play', 'click', function() {
+        video.load();
+        video.play();
     });
-    $('.com_info .closebtn').click(function(){
-        $('#company').removeClass('on');
+
+    $(document).delegate('.stop', 'click', function() {
+        if (video.paused !== true && video.ended !== true) {
+            video.pause();
+        } else {
+            video.play();
+        }
     });
-</script>
+
+    $(document).delegate('.stop', 'click', function() {
+        video.pause();
+        video.currentTime = 0;
+    });
+</script> -->
 </html>

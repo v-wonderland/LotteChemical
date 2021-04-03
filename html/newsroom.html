@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>뉴스룸</title>
     <link rel="stylesheet" href="../resources/css/import.css">
-    <link rel="stylesheet" href="../resources/css/sub.css">
+    <link rel="stylesheet" href="../resources/css/newsroom.css">
     <script src="../resources/js/jqery-3.5.1.min.js"></script>
     <script src="../resources/js/swiper-bundle.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
 </head>
 <body>
     
@@ -21,8 +22,8 @@
                     <li><a href="#">투자정보</a></li>
                     <li><a href="#">지속가능경영</a></li>
                     <li><a href="#">인재채용</a></li>
-                    <li class="prom"><a href="#">홍보센터</a></li>
-                    <li class="product"><a href="#">제품소개</a></li>
+                    <li class="prom"><a href="newsroom.html">홍보센터</a></li>
+                    <li class="product"><a href="product.html">제품소개</a></li>
                 </ul>
             </nav>
             <div class="util">
@@ -33,6 +34,17 @@
             </div>
         </header>
         <main>
+            <div class="fixed_nav">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#">뉴스</a></li>
+                        <li><a href="#">PR 자료실</a></li>
+                        <li><a href="#">SNS 채널</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">생활 속의 롯데케미칼</a></li>
+                    </ul>
+                </nav>
+            </div>
             <section class="title">
                 <h2><img src="../resources/images/newsroom/newsroom_h2.png" alt=""></h2>
                 <p><img src="../resources/images/newsroom/newsroom_sub_tit.png" alt=""></p>
@@ -97,7 +109,7 @@
                 </script>
             </section>
 
-            <section class="broad_sl">
+            <section class="broad_sl move">
                 <div class="tit">
                     <h2><img src="../resources/images/newsroom/broad_h2.png" alt=""></h2>
                     <p><img src="../resources/images/newsroom/broad_p.png" alt=""></p>
@@ -192,6 +204,12 @@
                 </div>
                 <script>
                     var swiper = new Swiper('.broad_sl .swiper-container', {
+                        loop:true,
+                        speed:1200,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
                         slidesPerView: 3,
                         spaceBetween: 60,
                         pagination: {
@@ -202,7 +220,7 @@
                 </script>
             </section>
 
-            <section class="digital_sl">
+            <section class="digital_sl move">
                 <div class="tit">
                     <h2><img src="../resources/images/newsroom/digital_h2.png" alt=""></h2>
                     <p><img src="../resources/images/newsroom/digital_p.png" alt=""></p>
@@ -297,6 +315,12 @@
                 </div>
                 <script>
                     var swiper = new Swiper('.digital_sl .swiper-container', {
+                        loop:true,
+                        speed:1500,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
                         slidesPerView: 3,
                         spaceBetween: 60,
                         pagination: {
@@ -307,7 +331,7 @@
                 </script>
             </section>
 
-            <section class="media_sl">
+            <section class="media_sl move">
                 <div class="tit">
                     <h2><img src="../resources/images/newsroom/media_h2.png" alt=""></h2>
                     <p><img src="../resources/images/newsroom/media_p.png" alt=""></p>
@@ -402,6 +426,12 @@
                 </div>
                 <script>
                     var swiper = new Swiper('.media_sl .swiper-container', {
+                        loop:true,
+                        speed:1700,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
                         slidesPerView: 3,
                         spaceBetween: 60,
                         pagination: {
@@ -413,6 +443,7 @@
             </section>
         </main>
         <footer>
+            <div class="btn_top move"><img src="../resources/images/newsroom/top_btn.png" alt=""></div>
             <img src="../resources/images/newsroom/newsroom_bottom_cont.png" alt="">
             <img src="../resources/images/footer.png" alt="footer">
         </footer>
