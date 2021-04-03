@@ -4,6 +4,8 @@ main{width: 1920px;}
 .main_vsl .swiper-slide{width: 1920px; height: 1000px !important; position: relative;}
 .main_vsl .swiper-slide.sl_video video{width: 1920px !important; height: 1080px !important;}
 .main_vsl .swiper-slide.sl_video .dim{width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); position: absolute; left: 0; top: 0;}
+.main_vsl .swiper-slide.sl_video .desc{padding: 140px 35px 200px 150px;}
+
 .main_vsl .swiper-slide .visual{width: 100%; height: 100%;}
 .main_vsl .swiper-slide .desc{
     width: 640px; height: 1000px; padding: 140px 35px 200px 200px;
